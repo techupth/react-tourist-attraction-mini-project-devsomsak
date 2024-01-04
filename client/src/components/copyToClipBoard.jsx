@@ -23,7 +23,7 @@ const CopyToClipboardButton = ({ text }) => {
       <img
         src={copyIcon}
         alt="Copy Link"
-        className="copy-icon cursor-pointer w-[36px] h-[36px] absolute bottom-[30px] right-[20px] mt-2"
+        className="copy-icon cursor-pointer w-[36px] h-[36px] absolute bottom-[30px] right-[300px] mt-2"
       />
     </button>
   );

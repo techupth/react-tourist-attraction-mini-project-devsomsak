@@ -78,13 +78,13 @@ export default function FindTouristPlace() {
 
               <div className="blog-info-container relative">
                 <li
-                  className="blog-title font-bold ml-[20px] max-w-[400px] mt-[0px]"
+                  className="blog-title font-bold ml-[20px] max-w-[400px] mt-[0px] list-none"
                   style={{ fontFamily: "Prompt, sans-serif" }}
                 >
                   {item.title}
                 </li>
                 <li
-                  className="blog-description ml-[20px]   truncate max-w-screen-md mx-auto"
+                  className="blog-description ml-[20px]   truncate max-w-screen-md mx-auto list-none"
                   style={{
                     maxWidth: "79ch",
                     fontFamily: "Prompt, sans-serif",
@@ -101,7 +101,7 @@ export default function FindTouristPlace() {
                 </a>
                 <div className="flex ">
                   <div className=" ml-[20px]">หมวด</div>
-                  <li className="blog-tags ml-[20px] w-[500px] h-[30px] ">
+                  <li className="blog-tags ml-[20px] w-[600px] h-[30px] list-none">
                     {item.tags.map((tag, index) => (
                       <button
                         key={index}
