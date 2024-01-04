@@ -1,5 +1,5 @@
 import React from "react";
-import copyIcon from "../images/copyIcon.png";
+import copyLinkIcon from "../images/copyLinkIcon.png";
 
 const CopyToClipboardButton = ({ text }) => {
   const copyToClipboard = () => {
@@ -10,7 +10,7 @@ const CopyToClipboardButton = ({ text }) => {
       textField.select();
       document.execCommand("copy");
       textField.remove();
-      alert("Copied to clipboard!");
+      alert("Copied Link(url) to clipboard!");
       console.log("Copied URL:", text);
     } catch (error) {
       console.error("Error copying to clipboard:", error);
@@ -21,7 +21,7 @@ const CopyToClipboardButton = ({ text }) => {
   return (
     <button onClick={copyToClipboard}>
       <img
-        src={copyIcon}
+        src={copyLinkIcon}
         alt="Copy Link"
         className="copy-icon cursor-pointer w-[36px] h-[36px] absolute bottom-[30px] right-[300px] mt-2"
       />

@@ -52,12 +52,12 @@ export default function FindTouristPlace() {
       >
         เที่ยวไหนดี
       </div>
-      <div className="flex  w-[750px]">
+      <div className="flex  w-[820px]">
         <h1>ค้นหาสถานที่ท่องเที่ยว</h1>
       </div>
       <input
         type="text"
-        className="search-text mb-[20px] w-[750px] text-center border-[1px] border-solid border-[blue]"
+        className="search-text mb-[10px] w-[820px] text-center border-[1px] border-solid border-[blue] shadow-xl"
         placeholder="หาที่เที่ยวแล้วไปกัน"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
@@ -71,7 +71,7 @@ export default function FindTouristPlace() {
             >
               <div className="blog-image-container">
                 <img
-                  className="blog-image rounded-[10px] object-cover w-[250px] h-[210px] "
+                  className="blog-image rounded-[10px] object-cover w-[250px] h-[210px] shadow-xl"
                   src={item.photos[0]}
                 />
               </div>
@@ -113,7 +113,7 @@ export default function FindTouristPlace() {
                     ))}
                   </li>
                 </div>
-                <div className="flex ml-[20px] w-[350px] mt-[1px] ">
+                <div className="flex ml-[20px] w-[350px] mt-[1px] shadow-sm">
                   {item.photos.slice(1).map((photos, index) => (
                     <img
                       key={index}
@@ -122,9 +122,8 @@ export default function FindTouristPlace() {
                     />
                   ))}
                 </div>
-                <button onClick={() => copyToClipboard(item.url)}>
-                  <CopyToClipboardButton text={item.url} />
-                </button>
+                <button onClick={() => copyToClipboard(item.url)}></button>
+                <CopyToClipboardButton text={item.url} />
               </div>
             </div>
           ))}
@@ -183,9 +182,8 @@ export default function FindTouristPlace() {
                     />
                   ))}
                 </div>
-                <button onClick={() => copyToClipboard(item.url)}>
-                  <CopyToClipboardButton text={item.url} />
-                </button>
+                <button onClick={() => copyToClipboard(item.url)}></button>
+                <CopyToClipboardButton text={item.url} />
               </div>
             </div>
           ))}
