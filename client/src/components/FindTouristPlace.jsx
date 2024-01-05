@@ -1,4 +1,5 @@
 import axios from "axios";
+import React from "react";
 import { useEffect, useState } from "react";
 import {
   default as CopyToClipboardButton,
@@ -103,13 +104,16 @@ export default function FindTouristPlace() {
                   <div className=" ml-[20px]">หมวด</div>
                   <li className="blog-tags ml-[20px] w-[600px] h-[30px] list-none">
                     {item.tags.map((tag, index) => (
-                      <button
-                        key={index}
-                        className="mr-2 underline"
-                        onClick={() => handleSendTextToSearchText(tag)}
-                      >
-                        {tag}
-                      </button>
+                      <React.Fragment key={index}>
+                        {index > 0 && index === item.tags.length - 1 && " และ "}
+                        <button
+                          key={index}
+                          className="mr-2 underline"
+                          onClick={() => handleSendTextToSearchText(tag)}
+                        >
+                          {tag}
+                        </button>
+                      </React.Fragment>
                     ))}
                   </li>
                 </div>
@@ -163,13 +167,16 @@ export default function FindTouristPlace() {
                   <div className=" ml-[20px]">หมวด</div>
                   <li className="blog-tags ml-[20px] w-[500px] h-[30px] ">
                     {item.tags.map((tag, index) => (
-                      <button
-                        key={index}
-                        className="mr-2 underline"
-                        onClick={() => handleSendTextToSearchText(tag, index)}
-                      >
-                        {tag}
-                      </button>
+                      <React.Fragment key={index}>
+                        {index > 0 && index === item.tags.length - 1 && " และ "}
+                        <button
+                          key={index}
+                          className="mr-2 underline"
+                          onClick={() => handleSendTextToSearchText(tag, index)}
+                        >
+                          {tag}
+                        </button>
+                      </React.Fragment>
                     ))}
                   </li>
                 </div>
