@@ -10,7 +10,7 @@ const CopyToClipboardButton = ({ text }) => {
       textField.select();
       document.execCommand("copy");
       textField.remove();
-      alert("Copied Link(url) to clipboard!");
+      alert("Copied Link(url) to clipboard! and you can check in console.log");
       console.log("Copied URL:", text);
     } catch (error) {
       console.error("Error copying to clipboard:", error);
